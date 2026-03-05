@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "build": "vite build",
     "vercel-build": "pnpm run build",
     "dev": "vite",
     "build": "vite build",
@@ -51,4 +50,5 @@
     "vite": "^6.0.5"
   }
 }
+
 
