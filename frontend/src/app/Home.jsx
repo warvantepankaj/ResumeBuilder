@@ -21,6 +21,15 @@ export default function Home() {
     }
   };
 
+   const handleScoreResume = () => {
+    if (!isSignedIn) {
+      openSignIn();
+    } 
+    else {
+      navigate("/resume-scorer");
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900">
       {/* Navbar */}
@@ -44,7 +53,7 @@ export default function Home() {
           <button  onClick={handleStartBuilding}  className="bg-purple-600  dark:bg-purple-500 dark: hover:bg-purple-400 text-lg text-white  dark:text-black px-6 py-3 rounded-lg flex items-center gap-2">
             <FileText size={18} /> Start Building Resume
           </button>
-          <button onClick={handleStartBuilding} className="border border-gray-300 hover:bg-purple-600 hover:text-white dark:border-gray-600 px-6 py-3 rounded-lg flex items-center gap-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
+          <button onClick={handleScoreResume} className="border border-gray-300 hover:bg-purple-600 hover:text-white dark:border-gray-600 px-6 py-3 rounded-lg flex items-center gap-2 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">
             <ClipboardCheck size={18} /> Check ATS Score
           </button>
         </div>

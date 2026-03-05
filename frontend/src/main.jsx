@@ -6,7 +6,8 @@ import ResumeBuilder from "./components/ResumeBuilder/ResumeBuilder.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./app/Home.jsx";
-import ResumeBuilderPage from "./app/ResumeBuilder/ResumeBuilderPage.jsx";
+// import ResumeBuilderPage from "./app/ResumeBuilder/ResumeBuilderPage.jsx";
+import ResumeScorer from "./components/ResumeScore/ResumeScorerPage";
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -27,7 +28,8 @@ const router = createBrowserRouter([
         element: <ResumeBuilder/>
       },
       {
-
+        path: "/resume-scorer",  
+        element: <ResumeScorer/>
       }
     ]  
   }
